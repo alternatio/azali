@@ -1,0 +1,39 @@
+body {
+	--colorBackground: #fdfefd;
+	--colorWhite: #fff;
+	--colorPink: #a06f7d;
+	--colorLightPink: #ae939b;
+	--colorBlack: #433e3e;
+	--fontSansSerif: Montserrat, sans-serif;
+	--fontSerif: Prata, serif;
+}
+
+html {
+	background: #fdfefd;
+	color: #433e3e;
+}
+
+.logo {
+	width: 6.8125rem;
+	height: 5.6875rem;
+	object-fit: contain;
+}
+
+.outline-button,
+.flat-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 3.75rem;
+	border-radius: 10rem;
+}
+
+.flat-button {
+	background: var(--colorPink);
+	color: var(--colorWhite);
+}
+
+.outline-button {
+	border: var(--colorPink) solid 1px;
+	color: var(--colorBlack);
+}

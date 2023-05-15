@@ -1,8 +1,8 @@
 <?php
 
-include './components/head.php';
+include_once './components/head.php';
 
-include './components/header.php';
+include_once './components/header.php';
 
 
-include './components/bottom.php';
+include_once './components/bottom.php';
