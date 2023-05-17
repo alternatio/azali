@@ -1,0 +1,57 @@
+.welcome {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.welcomeInner {
+  width: min(100%, 88rem);
+  display: flex;
+  align-items: center;
+  gap: 3.125rem;
+}
+
+.welcomeImage {
+  width: 36.25rem;
+}
+
+.welcomeRightPart {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.welcomeTitle {
+  font-size: 2rem;
+}
+
+.welcomeList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.welcomeItem {
+  width: 21.25rem;
+  display: flex;
+  gap: .5rem;
+  font-size: 1rem;
+
+}
+
+.welcomeItem:before {
+  content: '•';
+  font-size: inherit;
+}
+
+.welcomeButtons {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.welcomeButton {
+  /*width: 16.25rem;*/
+}

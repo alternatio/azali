@@ -3,3 +3,6 @@
 @import './globals.css';
 @import './components/header.css';
 @import './components/intro.css';
+@import './components/welcome.css';
+@import './components/danceNumbers.css';
+@import './components/group.css';
