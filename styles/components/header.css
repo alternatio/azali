@@ -5,13 +5,35 @@
 	width: 100%;
 	display: flex;
 	justify-content: center;
+	padding: 0 1rem;
+	z-index: 1000;
 }
 
 .header {
-	width: 100%;
-	background: #111;
+	width: min(100%, 88rem);
 	min-height: 2rem;
 	margin-top: 1.1875rem;
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
+	gap: 6.25rem;
+}
+
+.header__links {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	justify-content: space-around;
+}
+
+@media (max-width: 1300px) {
+	.header__links {
+		display: none;
+	}
+}
+
+.header__buttons {
+	display: flex;
+	align-items: center;
+	gap: 2.5rem;
 }

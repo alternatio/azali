@@ -1,0 +1,59 @@
+.intro {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.innerIntro {
+  width: min(100%, 88rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8.75rem;
+}
+
+.introLeftPart {
+  width: 45%;
+}
+
+.introImage {
+  height: 52rem;
+}
+
+.introTitles {
+  display: flex;
+  flex-direction: column;
+}
+
+.introBottomTitle {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2rem;
+}
+
+.introBottomTitle:before {
+  content: '';
+  width: 17.5rem;
+  height: 1px;
+  background: var(--colorBlack);
+}
+
+.introButtons {
+  display: flex;
+  align-items: center;
+  gap: 1.125rem;
+  margin-top: 1.5rem;
+}
+
+.introBackground {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: auto;
+}

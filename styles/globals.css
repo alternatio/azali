@@ -26,6 +26,7 @@ html {
 	justify-content: center;
 	height: 3.75rem;
 	border-radius: 10rem;
+	padding: 0 4.375rem;
 }
 
 .flat-button {
@@ -37,3 +38,21 @@ html {
 	border: var(--colorPink) solid 1px;
 	color: var(--colorBlack);
 }
+
+.sansSerifTitle,
+.serifTitle {
+	font-size: 4.875rem;
+	line-height: 90%;
+	text-transform: lowercase;
+}
+
+.sansSerifTitle {
+	font-weight: 200;
+}
+
+.serifTitle {
+	font-family: var(--fontSerif);
+	color: var(--colorPink);
+}
+
+
