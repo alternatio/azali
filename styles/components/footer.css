@@ -1,0 +1,30 @@
+.footer {
+  background: var(--colorLightPink);
+  padding: 6.25rem 0 6.25rem;
+  color: var(--colorWhite);
+}
+
+.footerInner {
+  display: flex;
+  gap: 5rem;
+  /*justify-content: flex-end;*/
+}
+
+.footerJoin,
+.footerContacts {
+  display: flex;
+  flex-direction: column;
+  gap: 1.625rem;
+}
+
+.footerTitle {
+  font-size: 2.5rem;
+  padding-bottom: 0.625rem;
+  border-bottom: var(--colorWhite) solid 1px;
+}
+
+.footerItem {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
