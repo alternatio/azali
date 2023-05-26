@@ -1,4 +1,4 @@
-<section class='wrapper'>
+<section class='wrapper cooperationWrapper'>
   <div class='inner cooperation'>
     <span class='cooperationTitle'>
       4 ШАГА К СОТРУДНИЧЕСТВУ

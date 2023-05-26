@@ -1,17 +1,16 @@
 <?php
+include_once './components/global/head.php';
 
-include_once './components/head.php';
+include_once './components/global/header.php';
+include_once './components/home/intro.php';
+include_once './components/home/welcome.php';
+include_once './components/home/danceNumber.php';
+include_once './components/home/nationalDances.php';
+include_once './components/home/nationalRituals.php';
+include_once './components/home/group.php';
+include_once './components/home/map.php';
+include_once './components/home/additionalServices.php';
+include_once './components/home/cooperation.php';
+include_once './components/global/footer.php';
 
-include_once './components/header.php';
-include_once './components/intro.php';
-include_once './components/welcome.php';
-include_once './components/danceNumber.php';
-include_once './components/nationalDances.php';
-include_once './components/nationalRituals.php';
-include_once './components/group.php';
-include_once './components/map.php';
-include_once './components/additionalServices.php';
-include_once './components/cooperation.php';
-include_once './components/footer.php';
-
-include_once './components/bottom.php';
+include_once './components/global/bottom.php';

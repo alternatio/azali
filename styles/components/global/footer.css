@@ -2,6 +2,7 @@
   background: var(--colorLightPink);
   padding: 6.25rem 0 6.25rem;
   color: var(--colorWhite);
+  margin-top: 0;
 }
 
 .footerInner {

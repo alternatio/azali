@@ -133,3 +133,49 @@ section {
 	color: var(--colorPink);
 	font-size: 1.25rem;
 }
+
+.labelCheckbox {
+	display: flex;
+	gap: .8rem;
+	align-items: center;
+	cursor: pointer;
+	width: fit-content;
+}
+
+.inputCheckbox {
+	width: 1.25rem;
+	height: 1.25rem;
+	appearance: none;
+	border-radius: 0.25rem;
+	background: var(--colorWhite);
+	border: var(--colorPink) solid 1px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: inherit;
+}
+
+.inputCheckbox:before {
+	content: '';
+	width: .875rem;
+	height: .875rem;
+	background: var(--colorPink);
+	border-radius: 0.15rem;
+	transform: scale(0);
+	transition: .15s linear;
+}
+
+.inputCheckbox:checked:before {
+	transform: scale(1);
+}
+
+.label {
+	padding: 1rem 2rem;
+	background: var(--colorWhite);
+	border: var(--colorPink) solid 1px;
+	border-radius: .75rem;
+}
+
+.input {
+	width: 100%;
+}

@@ -1,3 +1,7 @@
+.cooperationWrapper {
+  margin-bottom: 7.5rem;
+}
+
 .cooperation {
   display: flex;
   flex-direction: column;
