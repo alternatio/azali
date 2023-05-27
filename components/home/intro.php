@@ -19,10 +19,10 @@
         ПН-ВС С 9:00 ДО 21:00
       </span>
       <div class='introButtons'>
-        <button class='flat-button'>
+        <a class='flat-button' href='tel:89081003107'>
           Забронировать
-        </button>
-        <a class='outline-button'>
+        </a>
+        <a class='outline-button' href='tel:89081003107'>
           +7 (908) 100-31-07
         </a>
       </div>

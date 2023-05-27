@@ -1,3 +1,8 @@
+<?php
+session_start();
+$userEmail = $_SESSION['userEmail'];
+?>
+
 <div class='headerWrapper'>
   <header class='header'>
     <a class='logo' href='/'>
@@ -14,13 +19,33 @@
 <!--        Дополнительные услуги-->
 <!--      </a>-->
     </nav>
-    <div class='header__buttons'>
-      <a class='outline-button' href='/login.php'>
-        Войти
-      </a>
-      <a class='flat-button' href='/registration.php'>
-        Зарегистрироваться
-      </a>
-    </div>
+    <?php if (!isset($userEmail)) {
+    	echo "<div class='header__buttons'>
+        <a class='outline-button' href='/login.php'>
+          Войти
+        </a>
+        <a class='flat-button' href='/registration.php'>
+          Зарегистрироваться
+        </a>
+      </div>";
+    } else if ($userEmail == 'admin') {
+      echo "<div class='header__buttons'>"
+        . $userEmail .
+        "
+        <a class='outline-button' href='/admin.php'>
+          Админка
+        </a>
+        <a class='flat-button' href='/components/registrationLogin/logoutMethod.php'>
+          Выйти
+        </a>
+      </div>";
+    } else {
+    	echo "<div class='header__buttons'>"
+        . $userEmail .
+        "<a class='flat-button' href='/components/registrationLogin/logoutMethod.php'>
+          Выйти
+        </a>
+      </div>";
+    } ?>
   </header>
 </div>

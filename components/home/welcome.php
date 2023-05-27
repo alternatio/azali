@@ -27,12 +27,12 @@ $items = [
         Узнай подробнее о наших услугах или бронируй танец!
       </span>
       <div class='welcomeButtons'>
-        <button class='flat-button welcomeButton'>
+        <a class='flat-button welcomeButton' href='tel:89081003107'>
           Забронировать
-        </button>
-        <button class='outline-button welcomeButton'>
-          Подробнее
-        </button>
+        </a>
+<!--        <button class='outline-button welcomeButton'>-->
+<!--          Подробнее-->
+<!--        </button>-->
       </div>
     </div>
   </div>

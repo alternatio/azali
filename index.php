@@ -1,4 +1,9 @@
 <?php
+session_start();
+$_SESSION['errorTextLogin'] = null;
+$_SESSION['errorText'] = null;
+
+
 include_once './components/global/head.php';
 
 include_once './components/global/header.php';
