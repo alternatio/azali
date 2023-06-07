@@ -11,6 +11,7 @@ $password = $_POST['password'];
 $passwordRepeat = $_POST['passwordRepeat'];
 
 if ($password === $passwordRepeat && $password && $email) {
+    // забирание переменной из хранилища сессиии
   $connection = $_SESSION['connection'];
 
   $sqlResponse = "SELECT * FROM `users` WHERE `email` = '$email'";
@@ -22,6 +23,7 @@ if ($password === $passwordRepeat && $password && $email) {
     header('Location: ' . $_SERVER['HTTP_REFERER']);
     die('Такой пользователь уже существует!');
   } else {
+//      формирование запроса к бд
     $sqlResponse = "INSERT INTO `users` (`name`, `surname`, `patronymic`, `numberPhone`, `email`, `password`) VALUES ('$name', '$surname', '$patronymic', '$numberPhone', '$email', '$password');";
 
     $connection -> query($sqlResponse);

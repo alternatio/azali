@@ -15,7 +15,7 @@ if ($password && $email) {
   if ($response->num_rows) {
     $_SESSION['userEmail'] = $email;
     $_SESSION['errorTextLogin'] = 'Успешно';
-    header('Location: ' . $_SERVER['HTTP_REFERER']);
+    header('Location: ' . '/');
     die('Успешно');
   } else {
     $_SESSION['errorTextLogin'] = 'Такого пользователя не существует';
@@ -23,5 +23,5 @@ if ($password && $email) {
     die('Такого пользователя не существует');
   }
 } else {
-  header('Location: ' . $_SERVER['HTTP_REFERER']);
+  header('Location: ' . '/');
 }
