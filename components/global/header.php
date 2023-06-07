@@ -42,7 +42,11 @@ $userEmail = $_SESSION['userEmail'];
     } else {
     	echo "<div class='header__buttons'>"
         . $userEmail .
-        "<a class='flat-button' href='/components/registrationLogin/logoutMethod.php'>
+        "
+        <a class='outline-button' href='/application.php'>
+          Оставить заявку
+        </a>
+        <a class='flat-button' href='/components/registrationLogin/logoutMethod.php'>
           Выйти
         </a>
       </div>";

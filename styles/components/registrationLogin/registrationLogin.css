@@ -28,6 +28,8 @@
 .registrationLoginTitle {
 	font-size: 4.875rem;
 	font-weight: 300;
+	line-height: 90%;
+	margin-bottom: .75rem;
 }
 
 .registrationLoginForm {

@@ -13,7 +13,9 @@ if ($password && $email) {
   $response = $connection -> query($sqlResponse);
 
   if ($response->num_rows) {
+    $data = mysqli_fetch_assoc($response);
     $_SESSION['userEmail'] = $email;
+    $_SESSION['userId'] = $data['id'];
     $_SESSION['errorTextLogin'] = 'Успешно';
     header('Location: ' . '/');
     die('Успешно');

@@ -2,12 +2,19 @@
 session_start();
 require_once './helpers/db.php';
 $connection = $_SESSION['connection'];
-$email = $_SESSION['userEmail'];
+
 $sqlResponse = "SELECT * FROM `users`";
 $response = $connection -> query($sqlResponse);
+
+$sqlResponse1 = "SELECT * FROM `applications`";
+$response1 = $connection -> query($sqlResponse1);
+
+//while ($preparedData = mysqli_fetch_assoc($response1)) {
+//  var_dump($preparedData);
+//}
 ?>
 
-<section class='wrapper'>
+<section class='wrapper adminWrapper'>
   <div class='inner admin'>
     <span class='adminTitle'>Пользователи</span>
     <div class='users'>
@@ -43,6 +50,40 @@ $response = $connection -> query($sqlResponse);
           "</div>
           <div>"
           . $preparedData['password'] .
+          "</div>";
+      }
+      ?>
+    </div>
+  </div>
+  <div class='inner admin'>
+    <span class='adminTitle'>Заявки</span>
+    <div class='applications'>
+      <div>
+        ID
+      </div>
+      <div>
+        userID
+      </div>
+      <div>
+        userEmail
+      </div>
+      <div>
+        message
+      </div>
+      <?php
+      while ($preparedData = mysqli_fetch_assoc($response1)) {
+        echo "
+          <div>"
+          . $preparedData['id'] .
+          "</div>
+          <div>"
+          . $preparedData['userId'] .
+          "</div>
+          <div>"
+          . $preparedData['userEmail'] .
+          "</div>
+          <div>"
+          . $preparedData['message'] .
           "</div>";
       }
       ?>
