@@ -1,15 +1,11 @@
 <?php
-$blocks = [];
-$block = [
-	'title' => 'Название номера',
-	'image' => '/public/images/blockImage.png',
-	'description' =>
-		'Описание номера: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-];
+session_start();
+require_once './helpers/db.php';
+$connection = $_SESSION['connection'];
 
-for ($i = 0; $i < 6; $i++) {
-	$blocks[] = $block;
-}
+$sqlResponse = "SELECT * FROM `services` WHERE type = 'танцевальные номера';";
+$response = $connection -> query($sqlResponse);
+
 ?>
 
 <section class='wrapper'>
@@ -23,21 +19,23 @@ for ($i = 0; $i < 6; $i++) {
       </span>
     </div>
     <div class='blocks'>
-      <?php foreach ($blocks as $block): ?>
-
+      <?php
+      while ($preparedData = mysqli_fetch_assoc($response)) {
+        echo "
         <div class='block'>
-          <img src="<?= $block['image'] ?>" alt='blockImage'>
+          <img class='blockImage' src=".$preparedData['image']." alt='blockImage'>
           <div class='blockBottom'>
             <span class='blockTitle'>
-              <?= $block['title'] ?>
+              ".$preparedData['title']."
             </span>
             <span class='blockDescription'>
-              <?= $block['description'] ?>
+              ".$preparedData['description']."
             </span>
           </div>
-        </div>
-
-      <?php endforeach; ?>
+      </div>
+        ";
+      }
+      ?>
     </div>
   </div>
 </section>
